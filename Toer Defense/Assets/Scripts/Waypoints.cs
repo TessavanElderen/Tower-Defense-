@@ -9,7 +9,6 @@ public class Waypoints : MonoBehaviour
     private int index = 0;
     
     [SerializeField] float speed = 5f;
-
     [SerializeField] Transform target;
 
     private void Awake()
@@ -24,20 +23,25 @@ public class Waypoints : MonoBehaviour
     {
         MoveToWayPoint();
     }
+    
     void MoveToWayPoint()
     {
+        // De enemy beweegt naar de waypoint in de lijst.
         transform.position = Vector3.MoveTowards(transform.position, 
             waypoints[index].position, 
-            speed * Time.deltaTime); // De enemy beweegt naar de waypoint in de lijst.
+            speed * Time.deltaTime);
+        // De Enemy kijkt naar de waypoint en draait er naar toe. 
         transform.rotation = Quaternion.LookRotation(Vector3.RotateTowards
             (transform.forward, waypoints[index].position - transform.position, 
-            speed * Time.deltaTime, 0)); // De Enemy kijkt naar de waypoint en draait er naar toe. 
+            speed * Time.deltaTime, 0)); 
 
-        if (Vector3.Distance(transform.position, waypoints[waypoints.Count - 1].position) < 0.01f)
+        // Bereken het punt van de enemy naar de volgende waypoint
+        if (Vector3.Distance(transform.position, waypoints[waypoints.Count - 1].position) < 0.01f) 
         {
-           Destroy(gameObject);
+            Destroy(gameObject);
         }
-        else if(Vector3.Distance(transform.position, waypoints[index].position) < 0.01f)
+        // als de waypoint is aangeraakt met de enemy dan gaat de enemy naar de volgende in de list
+        else if (Vector3.Distance(transform.position, waypoints[index].position) < 0.01f) 
         {
             index++;
         }
