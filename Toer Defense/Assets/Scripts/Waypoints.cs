@@ -5,11 +5,11 @@ using UnityEngine;
 public class Waypoints : MonoBehaviour
 {
     [Header("Lists")]
-    [SerializeField] List<Transform> waypoints = new List<Transform>();
+    [SerializeField] private List<Transform> waypoints = new List<Transform>();
     private int index = 0;
     
-    [SerializeField] float speed = 5f;
-    [SerializeField] Transform target;
+    [SerializeField] private float speed = 5f;
+    [SerializeField] private Transform target;
 
     private void Awake()
     {
@@ -23,8 +23,8 @@ public class Waypoints : MonoBehaviour
     {
         MoveToWayPoint();
     }
-    
-    void MoveToWayPoint()
+
+    private void MoveToWayPoint()
     {
         // De enemy beweegt naar de waypoint in de lijst.
         transform.position = Vector3.MoveTowards(transform.position, 
