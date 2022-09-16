@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro; 
 public class Waypoints : MonoBehaviour
 {
     [Header("Lists")]
@@ -10,6 +10,8 @@ public class Waypoints : MonoBehaviour
     
     [SerializeField] private float speed = 5f;
     [SerializeField] private Transform target;
+
+    [SerializeField] TMP_Text enemyLeftText;
 
     private void Awake()
     {
@@ -39,6 +41,7 @@ public class Waypoints : MonoBehaviour
         if (Vector3.Distance(transform.position, waypoints[waypoints.Count - 1].position) < 0.01f) 
         {
             Destroy(gameObject);
+            
         }
         // als de waypoint is aangeraakt met de enemy dan gaat de enemy naar de volgende in de list
         else if (Vector3.Distance(transform.position, waypoints[index].position) < 0.01f) 

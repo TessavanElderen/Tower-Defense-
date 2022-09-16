@@ -1,20 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System;
+using TMPro;
+using UnityEngine.UI; 
 public class EnemySpawner : MonoBehaviour
 {
+    [Header("UI")]
+    [SerializeField] TMP_Text waveLeftText;
+    [SerializeField] TMP_Text enemyLeftText; 
+
     [Header("Obj")]
-    [SerializeField] GameObject myEnemy1; 
+    [SerializeField] GameObject myEnemy;
 
     [Header("WaveSpawner")]
-    [SerializeField] int EnemyNum = 5;
-    [SerializeField] int EnemyNumIncrease = 5;
-    int toSpawn; 
+    [SerializeField] public int waveCounter = 1; 
+    [SerializeField] public int EnemyNum = 5;
+    [SerializeField] public int EnemyNumIncrease = 5;
+    [SerializeField] public int toSpawn; 
 
     [Header("Spawning")]
-    [SerializeField] float waitForEnemy = 1f;
-    float spawnTimer;
+    [SerializeField] public float waitForEnemy = 1f;
+    [SerializeField] public float spawnTimer;
 
     private void Start()
     {
@@ -24,21 +31,30 @@ public class EnemySpawner : MonoBehaviour
 
     private void Update()
     {
-        
+        Spawn();
+    }
+
+    void Spawn()
+    {
         if (toSpawn > 0)
         {
-            spawnTimer -= Time.deltaTime; 
+            spawnTimer -= Time.deltaTime;
             if (spawnTimer <= 0)
             {
-                Instantiate(myEnemy1, gameObject.transform);
+                Instantiate(myEnemy, gameObject.transform);
                 toSpawn--;
+
                 spawnTimer = waitForEnemy;
             }
-        } 
+        }
         else if (GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
         {
+            waveCounter++;
             EnemyNum += EnemyNumIncrease;
             toSpawn = EnemyNum;
         }
+        waveLeftText.text = $"Wave: " + waveCounter;
+        enemyLeftText.text = $"Enemy: {GameObject.FindGameObjectsWithTag("Enemy").Length}";
     }
+    
 }
