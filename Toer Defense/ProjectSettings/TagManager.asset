@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Waypoint
   - Enemy
+  - Tower
+  - TowerRange
   layers:
   - Default
   - TransparentFX

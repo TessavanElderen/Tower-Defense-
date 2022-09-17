@@ -10,9 +10,6 @@ public class Waypoints : MonoBehaviour
     
     [SerializeField] private float speed = 5f;
     [SerializeField] private Transform target;
-
-    [SerializeField] TMP_Text enemyLeftText;
-
     private void Awake()
     {
         foreach(GameObject waypoint in GameObject.FindGameObjectsWithTag("Waypoint"))
