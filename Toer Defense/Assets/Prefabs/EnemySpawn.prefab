@@ -44,13 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56623e7ec5f7fc043b4c307d2cd19da2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveLeftText: {fileID: 663468130835094493, guid: 091b96f4e76524b43a1e5309fbe5c8db,
-    type: 3}
-  enemyLeftText: {fileID: 5060348560707517689, guid: 50d03202507c9f24ca84911e628ab807,
-    type: 3}
+  waveLeftText: {fileID: 0}
+  enemyLeftText: {fileID: 0}
   myEnemy: {fileID: 8431999966645566492, guid: 296cc26769609474f9636721bbf6afca, type: 3}
   waveCounter: 1
-  EnemyNum: 5
+  EnemyNum: 6
   EnemyNumIncrease: 3
   toSpawn: 0
   waitForEnemy: 1

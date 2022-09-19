@@ -4,22 +4,20 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
-    public GameObject target;
-
-    // Als ze in de range komen van de toren kan kijken ze naar de enemies. 
-    // Als ze in de Ontrigger komen Find dan de target. 
-
-    private void Start()
-    {
-        target = GameObject.Find("Enemy(Clone)"); 
-    }
+    [SerializeField] GameObject target;
+    [SerializeField] GameObject tower; 
+    
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Enemy")
+        if (other.gameObject.CompareTag("Enemy"))
         {
+            target = other.gameObject;
+            Debug.Log("1");
             Vector3 targetPostion = new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z);
-            transform.LookAt(targetPostion);
+            Debug.Log("2");
+            tower.transform.LookAt(targetPostion);
+            Debug.Log("3");
         }
     }
 }
