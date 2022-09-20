@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     public void PlaceTower()
     {
         currentTower = Instantiate(towerPrefab, new Vector3(0,1,0), Quaternion.identity);
-        currentTower.GetComponent<TowerMovement>().SelectTower(true); 
+        currentTower.GetComponent<TowerMovement>().SelectTower(true);
+        Debug.Log("A Tower On Mouse");
     }
 }
