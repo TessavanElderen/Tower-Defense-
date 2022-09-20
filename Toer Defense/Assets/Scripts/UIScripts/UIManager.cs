@@ -5,13 +5,11 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
 
-    private void Start()
+    public GameObject currentTower;
+    [SerializeField] GameObject towerPrefab;
+    public void PlaceTower()
     {
-        
-    }
-    // This function will make a tower every time you hit the button
-    public void PlaceTower(GameObject tower)
-    {
-        curTower = Instantiate(tower, new Vector3(0, 1, 0), Quaternion.identity);
+        currentTower = Instantiate(towerPrefab, new Vector3(0,1,0), Quaternion.identity);
+        currentTower.GetComponent<TowerMovement>().SelectTower(true); 
     }
 }
