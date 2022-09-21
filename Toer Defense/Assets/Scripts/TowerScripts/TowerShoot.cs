@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class TowerShoot : MonoBehaviour
 {
-    [SerializeField] GameObject target;
-    private GameObject tower;
-    [SerializeField] int rotationSpeed = 5;
-    //private float rotationA, rotationB; 
-    private void Update()
-    {
-        LookingAtEnemy();
-    }
 
-    void LookingAtEnemy()
+    //De toren mag niet op de path geplaatst worden. 
+    //Als je toren je pad raakt dan word die een andere kleur. 
+    [SerializeField] GameObject placingTower;
+    [SerializeField] LayerMask pathLayer;
+
+
+    /*private void OnTriggerEnter(Collider other)
     {
-        //transform.localRotation = Quaternion.Slerp(rotationA, rotationB, Time.deltaTime * rotationSpeed); 
-    }
+        if ()
+        {
+
+        }
+    }*/
 }

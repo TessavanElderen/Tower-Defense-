@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using TMPro;
-using UnityEngine.UI; 
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class EnemySpawner : MonoBehaviour
 {
     [Header("UI")]
     [SerializeField] TMP_Text waveLeftText;
-    [SerializeField] TMP_Text enemyLeftText; 
+    [SerializeField] TMP_Text enemyLeftText;
 
     [Header("Obj")]
     [SerializeField] GameObject myEnemy;
@@ -22,6 +23,10 @@ public class EnemySpawner : MonoBehaviour
     [Header("Spawning")]
     [SerializeField] public float waitForEnemy = 1f;
     [SerializeField] public float spawnTimer;
+
+    [Header("EndGame")]
+    [SerializeField] public int endLevel;
+
 
     private void Start()
     {
@@ -53,8 +58,7 @@ public class EnemySpawner : MonoBehaviour
             EnemyNum += EnemyNumIncrease;
             toSpawn = EnemyNum;
         }
-        waveLeftText.text = $"Wave: " + waveCounter;
-        enemyLeftText.text = $"Enemy: {GameObject.FindGameObjectsWithTag("Enemy").Length}";
+        waveLeftText.text = $"Wave: {waveCounter} / {endLevel}";
+        enemyLeftText.text = $"Enemy: {GameObject.FindGameObjectsWithTag("Enemy").Length} / {EnemyNum}";
     }
-    
 }
