@@ -53,3 +53,4 @@ MonoBehaviour:
   toSpawn: 0
   waitForEnemy: 1
   spawnTimer: 0
+  endLevel: 30
