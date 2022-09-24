@@ -8,30 +8,34 @@ using UnityEngine.SceneManagement;
 public class EnemySpawner : MonoBehaviour
 {
     [Header("UI")]
-    [SerializeField] TMP_Text waveLeftText;
-    [SerializeField] TMP_Text enemyLeftText;
+    public TMP_Text waveLeftText;
+    public TMP_Text enemyLeftText;
 
     [Header("Obj")]
-    [SerializeField] GameObject myEnemy;
+    public GameObject myEnemy;
 
     [Header("WaveSpawner")]
-    [SerializeField] public int waveCounter = 1; 
-    [SerializeField] public int EnemyNum = 5;
-    [SerializeField] public int EnemyNumIncrease = 5;
-    [SerializeField] public int toSpawn; 
+    public int waveCounter = 1; 
+    public int EnemyNum = 5;
+    public int EnemyNumIncrease = 5;
+    public int toSpawn; 
 
     [Header("Spawning")]
-    [SerializeField] public float waitForEnemy = 1f;
-    [SerializeField] public float spawnTimer;
+    public float waitForEnemy = 1f;
+    public float spawnTimer;
 
     [Header("EndGame")]
-    [SerializeField] public int endLevel;
+    public int endLevel;
 
+    [Header("Other Scripts")]
+    private MoneySystem moneySystemScript; 
 
     private void Start()
     {
+        moneySystemScript = GameObject.Find("EnemySpawn").GetComponent<MoneySystem>();
         toSpawn = EnemyNum;
-        spawnTimer = waitForEnemy; 
+        spawnTimer = waitForEnemy;
+        
     }
 
     private void Update()
@@ -54,11 +58,17 @@ public class EnemySpawner : MonoBehaviour
         }
         else if (GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
         {
+            
             waveCounter++;
             EnemyNum += EnemyNumIncrease;
             toSpawn = EnemyNum;
         }
         waveLeftText.text = $"Wave: {waveCounter} / {endLevel}";
         enemyLeftText.text = $"Enemy: {GameObject.FindGameObjectsWithTag("Enemy").Length} / {EnemyNum}";
+    }
+
+    private void AddMoneyAfterWave()
+    {
+        moneySystemScript.WaveMoney(80); 
     }
 }
