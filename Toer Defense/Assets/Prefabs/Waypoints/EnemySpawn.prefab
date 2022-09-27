@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waveLeftText: {fileID: 0}
   enemyLeftText: {fileID: 0}
+  moneySystemScript: {fileID: 0}
   myEnemy: {fileID: 8431999966645566492, guid: 296cc26769609474f9636721bbf6afca, type: 3}
   waveCounter: 1
   EnemyNum: 6

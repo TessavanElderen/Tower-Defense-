@@ -131,7 +131,7 @@ MonoBehaviour:
   range: 4
   bulletPrefab: {fileID: 4977911674597659642, guid: 154fa56e62eb6ed45a0999b89376247c,
     type: 3}
-  reloadSpeed: 0.5
+  reloadSpeed: 0.3
 --- !u!1 &8787059470206935150
 GameObject:
   m_ObjectHideFlags: 0

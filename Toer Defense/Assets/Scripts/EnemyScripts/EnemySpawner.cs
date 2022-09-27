@@ -11,6 +11,8 @@ public class EnemySpawner : MonoBehaviour
     public TMP_Text waveLeftText;
     public TMP_Text enemyLeftText;
 
+    public MoneySystem moneySystemScript;
+
     [Header("Obj")]
     public GameObject myEnemy;
 
@@ -27,22 +29,19 @@ public class EnemySpawner : MonoBehaviour
     [Header("EndGame")]
     public int endLevel;
 
-    [Header("Other Scripts")]
-    private MoneySystem moneySystemScript; 
 
     private void Start()
     {
-        moneySystemScript = GameObject.Find("EnemySpawn").GetComponent<MoneySystem>();
+        
         toSpawn = EnemyNum;
         spawnTimer = waitForEnemy;
-        
     }
 
     private void Update()
     {
         Spawn();
     }
-
+    
     void Spawn()
     {
         if (toSpawn > 0)
@@ -58,8 +57,8 @@ public class EnemySpawner : MonoBehaviour
         }
         else if (GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
         {
-            
             waveCounter++;
+            moneySystemScript.GetComponent<MoneySystem>().AddMoney(someGold: 80);
             EnemyNum += EnemyNumIncrease;
             toSpawn = EnemyNum;
         }
@@ -67,8 +66,5 @@ public class EnemySpawner : MonoBehaviour
         enemyLeftText.text = $"Enemy: {GameObject.FindGameObjectsWithTag("Enemy").Length} / {EnemyNum}";
     }
 
-    private void AddMoneyAfterWave()
-    {
-        moneySystemScript.WaveMoney(80); 
-    }
+   
 }

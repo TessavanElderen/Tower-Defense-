@@ -5,21 +5,21 @@ using TMPro;
 public class MoneySystem : MonoBehaviour
 {
     public TMP_Text moneyText;
+
     public int moneyCount = 150;
+    public int waveMoneyCount = 80;
 
-    private int waveMoneyCount = 80; 
-
-    void Update()
+    private void Update()
     {
-        StartMoney();
-    }
-    void StartMoney()
-    {
-        moneyText.text = $"€ {moneyCount}";
+        DisplayMoney();
     }
 
-    public void WaveMoney(int gold)
+    private void DisplayMoney()
     {
-            moneyText.text = $"€ {moneyCount} + {waveMoneyCount}";
+        moneyText.text = $"€ " +moneyCount;
+    }
+    public void AddMoney(int someGold)
+    {
+        moneyCount += someGold;
     }
 }

@@ -12,11 +12,11 @@ public class TowerShoot : MonoBehaviour
     public float reloadSpeed;
 
     private GameObject target;
-    private float reloadTimer;
+    private float reloadTimer = 0.0f;
 
     private void Start()
     {
-        reloadTimer = 0.0f;
+        reloadTimer = reloadSpeed; 
     }
 
     private void Update()
