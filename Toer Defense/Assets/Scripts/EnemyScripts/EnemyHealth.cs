@@ -5,21 +5,17 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     [Header("References")]
-    public int health; 
-    public int damage; 
+    public int currentHealth = 20;
 
-    [Header("Objects")]
-    public GameObject enemyObject;
-    public GameObject bulletObject;
-
-    private void OnCollisionEnter(Collision other)
+    //als de enemy health op 0 komt gaat hij dood. 
+    public void TakeDamage(int damage)
     {
-        if (other.gameObject.CompareTag("Enemy"))
+        currentHealth -= damage;
+
+        if (currentHealth == 0)
         {
-            
-            health--;
-            Destroy(gameObject);
+            Destroy(this.gameObject);
+            Debug.Log(currentHealth);
         }
-        Debug.Log(health);
     }
 }

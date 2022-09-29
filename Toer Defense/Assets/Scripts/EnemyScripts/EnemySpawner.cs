@@ -12,6 +12,7 @@ public class EnemySpawner : MonoBehaviour
     public TMP_Text enemyLeftText;
 
     public MoneySystem moneySystemScript;
+    public int moneyValue = 80; 
 
     [Header("Obj")]
     public GameObject myEnemy;
@@ -58,7 +59,7 @@ public class EnemySpawner : MonoBehaviour
         else if (GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
         {
             waveCounter++;
-            moneySystemScript.GetComponent<MoneySystem>().AddMoney(someGold: 80);
+            moneySystemScript.GetComponent<MoneySystem>().AddMoney(someGold: moneyValue);
             EnemyNum += EnemyNumIncrease;
             toSpawn = EnemyNum;
         }

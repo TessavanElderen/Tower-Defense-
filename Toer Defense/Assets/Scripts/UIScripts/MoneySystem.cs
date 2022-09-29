@@ -16,7 +16,7 @@ public class MoneySystem : MonoBehaviour
 
     private void DisplayMoney()
     {
-        moneyText.text = $"€ " +moneyCount;
+        moneyText.text = $"€ " + moneyCount;
     }
     public void AddMoney(int someGold)
     {

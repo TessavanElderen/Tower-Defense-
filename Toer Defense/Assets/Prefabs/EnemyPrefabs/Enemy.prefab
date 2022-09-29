@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 1876171940856322870}
   - component: {fileID: 8431999966645566493}
   - component: {fileID: 8431999966645566489}
-  - component: {fileID: 6499224658352089900}
+  - component: {fileID: 1452304838}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -176,7 +176,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8431999966645566492}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -194,9 +194,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints: []
-  speed: 8
+  speed: 1
   target: {fileID: 8431999966645566488}
---- !u!114 &6499224658352089900
+--- !u!114 &1452304838
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -208,10 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e659f96c4a0dba44a65eea7e49b38da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
-  enemyObject: {fileID: 8431999966645566492}
-  bulletObject: {fileID: 4977911674597659642, guid: 154fa56e62eb6ed45a0999b89376247c,
-    type: 3}
+  currentHealth: 20
 --- !u!1 &8431999968029255275
 GameObject:
   m_ObjectHideFlags: 0
