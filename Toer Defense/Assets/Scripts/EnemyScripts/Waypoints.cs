@@ -6,6 +6,7 @@ public class Waypoints : MonoBehaviour
 {
     [Header("Lists")]
     [SerializeField] private List<Transform> waypoints = new List<Transform>();
+    //Als private niet in incpector doe dan een _ voor de naam 
     private int index = 0;
     
     [SerializeField] private float speed = 5f;

@@ -4,17 +4,11 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public Gradient gradient;
-
     public int  health;
 
     GameManager gameManager;
     public int sceneIndexValue; 
-    private void Start()
-    {
-        gradient = gameObject.GetComponent<Gradient>(); 
-    }
-
+   
     public void LoseHealth(int playerDamage)
     {
         health -= playerDamage;

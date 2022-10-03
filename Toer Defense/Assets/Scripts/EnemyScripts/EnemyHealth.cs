@@ -8,9 +8,9 @@ public class EnemyHealth : MonoBehaviour
     public int currentHealth = 20;
 
     //als de enemy health op 0 komt gaat hij dood. 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int amount)
     {
-        currentHealth -= damage;
+        currentHealth -= amount;
 
         if (currentHealth == 0)
         {

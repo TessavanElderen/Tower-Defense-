@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TowerShoot : MonoBehaviour
 {
+
     [Header("References Range"), Range(3f, 10.0f)]
     public float range; //diameter
 
@@ -44,7 +45,7 @@ public class TowerShoot : MonoBehaviour
         transform.LookAt(target.transform.position);
     }
 
-    void ShootEnemy()
+    private void ShootEnemy()
     {
         reloadTimer += Time.deltaTime; 
         //de toren mag alleen schieten wanneer er genoeg tijd voorbij is gegaan (ook wel ge-reload)
@@ -83,7 +84,6 @@ public class TowerShoot : MonoBehaviour
                 }
             }
             //Is deze afstand wel of niet kleiner dan de vorige of Mathf.Infinity?
-            
             //Zo nee de target wordt de dichtsbijzijndste enemy
         }
     }

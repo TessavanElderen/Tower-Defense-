@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Range : MonoBehaviour
 {
-
-    [SerializeField] public GameObject[] range;
+    //kan deze niet private staan, als je het in de incpecrtor wil dan doe [SerializeField]
+    public GameObject[] range;
 
     private void OnCollisionEnter(Collision collision)
     {

@@ -39,7 +39,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3951694569855756436}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56623e7ec5f7fc043b4c307d2cd19da2, type: 3}
   m_Name: 
@@ -48,11 +48,10 @@ MonoBehaviour:
   enemyLeftText: {fileID: 0}
   moneySystemScript: {fileID: 0}
   moneyValue: 80
-  myEnemy: {fileID: 0}
+  myEnemy: {fileID: 8431999966645566492, guid: 296cc26769609474f9636721bbf6afca, type: 3}
   waveCounter: 1
   EnemyNum: 6
   EnemyNumIncrease: 3
   toSpawn: 0
   waitForEnemy: 1
-  spawnTimer: 0
   endLevel: 30

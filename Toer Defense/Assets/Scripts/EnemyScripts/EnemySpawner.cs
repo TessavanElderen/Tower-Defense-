@@ -11,7 +11,7 @@ public class EnemySpawner : MonoBehaviour
     public TMP_Text waveLeftText;
     public TMP_Text enemyLeftText;
 
-    public MoneySystem moneySystemScript;
+    [SerializeField] private MoneySystem moneySystemScript;
     public int moneyValue = 80; 
 
     [Header("Obj")]
@@ -21,11 +21,11 @@ public class EnemySpawner : MonoBehaviour
     public int waveCounter = 1; 
     public int EnemyNum = 5;
     public int EnemyNumIncrease = 5;
-    public int toSpawn; 
+    [SerializeField] private int toSpawn; 
 
     [Header("Spawning")]
     public float waitForEnemy = 1f;
-    public float spawnTimer;
+    private float spawnTimer;
 
     [Header("EndGame")]
     public int endLevel;

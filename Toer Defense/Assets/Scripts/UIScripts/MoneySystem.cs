@@ -5,7 +5,6 @@ using TMPro;
 public class MoneySystem : MonoBehaviour
 {
     public TMP_Text moneyText;
-
     public int moneyCount = 150;
     public int waveMoneyCount = 80;
 
