@@ -7,11 +7,11 @@ public class EnemyHealth : MonoBehaviour
     [Header("References")]
     public int currentHealth = 20;
 
+  
     //als de enemy health op 0 komt gaat hij dood. 
     public void TakeDamage(int amount)
     {
         currentHealth -= amount;
-
         if (currentHealth == 0)
         {
             Destroy(this.gameObject);

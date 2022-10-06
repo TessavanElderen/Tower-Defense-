@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    //kan deze niet private staan, als je het in de incpecrtor wil dan doe [SerializeField]
+    [Header("Ref Bullets")]
     public float bulletSpeed;
     public float bulletDeleteTimer;
 
-    //kan deze niet private staan, als je het in de incpecrtor wil dan doe [SerializeField]
-    //deze kan je ook in een awake refrenceen.
-    public EnemyHealth enemyHealthScript;
+    [Header("Other Scripts")]
+    [SerializeField] EnemyHealth enemyHealthScript;
 
-    //kan deze niet private staan, als je het in de incpecrtor wil dan doe [SerializeField]
+    [Header("ref damage")]
     public int damageValue = 2;
+
     private void Start()
     {
         BulletTimer();
@@ -42,7 +42,7 @@ public class Projectile : MonoBehaviour
         {
             //Pak het object (enemy). Pak ook het component EnemyHealth daarin pak ik de functie en roep die op.
             other.gameObject.GetComponent<EnemyHealth>().TakeDamage(amount: damageValue);
-
+            
             //vernietig elke bullet als het object de enemy raakt.
             Destroy(gameObject);
 

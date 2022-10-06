@@ -10,7 +10,6 @@ public class Waypoints : MonoBehaviour
     private int index = 0;
     
     [SerializeField] private float speed = 5f;
-    [SerializeField] private Transform target;
     private void Awake()
     {
         foreach(GameObject waypoint in GameObject.FindGameObjectsWithTag("Waypoint"))
