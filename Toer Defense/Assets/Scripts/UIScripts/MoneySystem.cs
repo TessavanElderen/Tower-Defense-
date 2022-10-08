@@ -10,9 +10,13 @@ public class MoneySystem : MonoBehaviour
     public int moneyCount = 150;
     public int waveMoneyCount = 80;
 
+    [Header ("Canvas")]
+    [SerializeField] Button towerButton; //list voor alleen de tower buttons. 
+    [SerializeField] Canvas canvas;
+
     [Header("Other Scripts")]
-    [SerializeField] Button button;
-    [SerializeField] EnemyHealth enemyHealthScript; 
+    [SerializeField] EnemyHealth enemyHealthScript;
+
 
     private void Update()
     {
@@ -31,9 +35,9 @@ public class MoneySystem : MonoBehaviour
     public void ButtonMoney(int buttonAmount)
     {
         moneyCount -= buttonAmount;
-        if(moneyCount <= buttonAmount)
+        if (moneyCount <= buttonAmount)
         {
-            button.interactable = false;
+            towerButton.interactable = false;
         }
     }
 }

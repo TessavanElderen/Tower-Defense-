@@ -13,7 +13,7 @@ public class TowerPlacement : MonoBehaviour
     [Header("Other Scripts")]
     [SerializeField] TowerShoot _towerShootScript;
     [SerializeField] UIManager _uiManager;
-    public MoneySystem _moneySystemScript;
+    public MoneySystem moneySystemScript;
 
     //Range
     [Header("Range Ref")]
@@ -25,6 +25,11 @@ public class TowerPlacement : MonoBehaviour
     RaycastHit hitInfo;
 
     bool _isSelected = false;
+
+    private void Start()
+    {
+        moneySystemScript = FindObjectOfType<MoneySystem>();
+    }
     private void Update()
     {
         TowerPlacementRayCast();
@@ -45,8 +50,8 @@ public class TowerPlacement : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 TowerPlacement towerPlacement = this;
+                moneySystemScript.GetComponent<MoneySystem>().ButtonMoney(buttonAmount: 100);
                 towerPlacement.enabled = false;
-                _moneySystemScript.GetComponent<MoneySystem>().ButtonMoney(buttonAmount: 100);
             }
             transform.position = new Vector3(worldPos.x, worldPos.y + (transform.localScale.y / 2), worldPos.z);
         }
@@ -77,5 +82,4 @@ public class TowerPlacement : MonoBehaviour
         _isSelected = selectingTower;
     }
 
-    //De range gaat weg als je hem heb neer gezet
 }

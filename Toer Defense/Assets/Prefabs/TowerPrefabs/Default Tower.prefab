@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 195588949008180126}
   m_Layer: 8
   m_Name: Default Tower
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,7 +139,7 @@ MonoBehaviour:
   paths: []
   _towerShootScript: {fileID: 195588949008180126}
   _uiManager: {fileID: 0}
-  _moneySystemScript: {fileID: 0}
+  moneySystemScript: {fileID: 0}
   rangeObject: {fileID: 6640893394490363895}
   _isRangeGone: 0
 --- !u!114 &195588949008180126
