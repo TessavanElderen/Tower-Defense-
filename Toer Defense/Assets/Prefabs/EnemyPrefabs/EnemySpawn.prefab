@@ -46,9 +46,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waveLeftText: {fileID: 0}
   enemyLeftText: {fileID: 0}
-  moneySystemScript: {fileID: 0}
+  buyATowerScript: {fileID: 0}
   moneyValue: 80
-  myEnemy: {fileID: 2023350085374426755, guid: 0448f75ddc3a6bf479d19126cd52afb9, type: 3}
+  myEnemy: {fileID: 6908405749947431878, guid: 0448f75ddc3a6bf479d19126cd52afb9, type: 3}
   waveCounter: 1
   EnemyNum: 5
   EnemyNumIncrease: 2

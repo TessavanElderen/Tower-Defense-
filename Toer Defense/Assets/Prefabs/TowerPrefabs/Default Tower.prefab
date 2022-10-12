@@ -139,9 +139,10 @@ MonoBehaviour:
   paths: []
   _towerShootScript: {fileID: 195588949008180126}
   _uiManager: {fileID: 0}
-  moneySystemScript: {fileID: 0}
+  buyATowerScript: {fileID: 0}
   rangeObject: {fileID: 6640893394490363895}
   _isRangeGone: 0
+  buttonAmount: 100
 --- !u!114 &195588949008180126
 MonoBehaviour:
   m_ObjectHideFlags: 0

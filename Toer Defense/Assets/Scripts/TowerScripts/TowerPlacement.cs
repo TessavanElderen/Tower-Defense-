@@ -10,15 +10,20 @@ public class TowerPlacement : MonoBehaviour
 
     public GameObject[] paths;
 
+    //Scripts
     [Header("Other Scripts")]
     [SerializeField] TowerShoot _towerShootScript;
     [SerializeField] UIManager _uiManager;
-    public MoneySystem moneySystemScript;
+    public BuyATower buyATowerScript; 
 
     //Range
     [Header("Range Ref")]
     public GameObject rangeObject;
     public bool _isRangeGone;
+
+    //UI
+    [Header("UI Button Amount")]
+    [SerializeField] int buttonAmount; 
 
     //Extra
     Vector3 worldPos;
@@ -28,8 +33,9 @@ public class TowerPlacement : MonoBehaviour
 
     private void Start()
     {
-        moneySystemScript = FindObjectOfType<MoneySystem>();
+        buyATowerScript = FindObjectOfType<BuyATower>();
     }
+
     private void Update()
     {
         TowerPlacementRayCast();
@@ -50,8 +56,12 @@ public class TowerPlacement : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 TowerPlacement towerPlacement = this;
-                moneySystemScript.GetComponent<MoneySystem>().ButtonMoney(buttonAmount: 100);
+                buyATowerScript.GetComponent<BuyATower>().AmountButton(buttonAmount: buttonAmount);
                 towerPlacement.enabled = false;
+            }
+            if (Input.GetMouseButtonDown(1))
+            {
+                Destroy(gameObject);
             }
             transform.position = new Vector3(worldPos.x, worldPos.y + (transform.localScale.y / 2), worldPos.z);
         }
@@ -81,5 +91,4 @@ public class TowerPlacement : MonoBehaviour
     {
         _isSelected = selectingTower;
     }
-
 }

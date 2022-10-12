@@ -45,8 +45,6 @@ public class Projectile : MonoBehaviour
             
             //vernietig elke bullet als het object de enemy raakt.
             Destroy(gameObject);
-
-            Debug.Log("Dead Enemy!!");
         }
     }
 }

@@ -7,14 +7,14 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class EnemySpawner : MonoBehaviour
 {
-    [Header("UI")]
+    [Header("UI Text")]
     public TMP_Text waveLeftText;
     public TMP_Text enemyLeftText;
 
-    [SerializeField] private MoneySystem moneySystemScript;
+    [Header("Button Values")]
     public int moneyValue = 80; 
 
-    [Header("Obj")]
+    [Header("Objects")]
     public GameObject myEnemy;
 
     [Header("WaveSpawner")]
@@ -59,13 +59,15 @@ public class EnemySpawner : MonoBehaviour
         else if (GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
         {
             waveCounter++;
-            moneySystemScript.GetComponent<MoneySystem>().AddMoney(someGold: moneyValue);
+            AddMoney(someGold: moneyValue);
             EnemyNum += EnemyNumIncrease;
             toSpawn = EnemyNum;
         }
         waveLeftText.text = $"Wave: {waveCounter} / {endLevel}";
         enemyLeftText.text = $"Enemy: {GameObject.FindGameObjectsWithTag("Enemy").Length} / {EnemyNum}";
     }
-
-   
+    private void AddMoney(int someGold)
+    {
+        GameObject.Find("Money").GetComponent<Money>().displayMoney += someGold;
+    }
 }
