@@ -13,17 +13,11 @@ public class TowerPlacement : MonoBehaviour
     //Scripts
     [Header("Other Scripts")]
     [SerializeField] TowerShoot _towerShootScript;
-    [SerializeField] UIManager _uiManager;
-    public BuyATower buyATowerScript; 
 
     //Range
     [Header("Range Ref")]
     public GameObject rangeObject;
     public bool _isRangeGone;
-
-    //UI
-    [Header("UI Button Amount")]
-    [SerializeField] int buttonAmount; 
 
     //Extra
     Vector3 worldPos;
@@ -31,10 +25,9 @@ public class TowerPlacement : MonoBehaviour
 
     bool _isSelected = false;
 
-    private void Start()
-    {
-        buyATowerScript = FindObjectOfType<BuyATower>();
-    }
+
+    //money
+    private int towerCost; 
 
     private void Update()
     {
@@ -56,7 +49,8 @@ public class TowerPlacement : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 TowerPlacement towerPlacement = this;
-                buyATowerScript.GetComponent<BuyATower>().AmountButton(buttonAmount: buttonAmount);
+                //roept function op en haalt het geld er vanaf. 
+                GameObject.Find("Money").GetComponent<Money>().DecreaseMoney(towerCost);
                 towerPlacement.enabled = false;
             }
             if (Input.GetMouseButtonDown(1))
@@ -87,8 +81,9 @@ public class TowerPlacement : MonoBehaviour
         }
     }
 
-    public void SelectTower(bool selectingTower)
+    public void SelectTower(int cost, bool selectingTower)
     {
+        towerCost = cost;
         _isSelected = selectingTower;
     }
 }

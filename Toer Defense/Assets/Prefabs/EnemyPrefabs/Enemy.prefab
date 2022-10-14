@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints: []
-  speed: 10
+  speed: 5
 --- !u!114 &6908405749947431877
 MonoBehaviour:
   m_ObjectHideFlags: 0

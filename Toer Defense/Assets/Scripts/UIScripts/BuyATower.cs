@@ -5,31 +5,22 @@ using TMPro;
 using UnityEngine.UI;
 public class BuyATower : MonoBehaviour
 {
-    [Header("Text")]
-    [SerializeField] TMP_Text buttonMoneyText;
-
     [Header("Button amount")]
-    public int buttonMoneyAmount = 100;
+    [SerializeField] int buttonCostAmount;
+
+    [Header("GameObject")]
+    public GameObject towerPrefab;
 
     private void Update()
     {
         ButtonInteractable();
-        DisplayButtonMoney();
-    }
-
-    public void AmountButton(int buttonAmount)
-    {
-        GameObject.Find("Money").GetComponent<Money>().displayMoney -= buttonAmount;
-    }
-
-    private void DisplayButtonMoney()
-    {
-        buttonMoneyText.text = ($"$ " + buttonMoneyAmount);
     }
 
     private void ButtonInteractable()
     {
-        if (GameObject.Find("Money").GetComponent<Money>().displayMoney < buttonMoneyAmount)
+        GetComponentInChildren<TextMeshProUGUI>().text = $"$ " + buttonCostAmount;
+
+        if (GameObject.Find("Money").GetComponentInChildren<Money>().displayMoney < buttonCostAmount)
         {
             GetComponent<Button>().interactable = false;
         }
@@ -37,5 +28,19 @@ public class BuyATower : MonoBehaviour
         {
             GetComponent<Button>().interactable = true;
         }
+    }
+
+    public void ButtonCosts(int costs)
+    {
+        GameObject.Find("Money").GetComponent<Money>().displayMoney -= costs;
+        Debug.Log($"ButtonAmount = {costs} and displayMoney = {GameObject.Find("Money")}");
+    }
+
+    public void Placement()
+    {
+        // tower word aangemaakt. 
+        GameObject tower = Instantiate(towerPrefab, new Vector3(0, 1, 0), Quaternion.identity);
+        tower.GetComponent<TowerPlacement>().SelectTower(buttonCostAmount,true);
+        Debug.Log("A Tower On Mouse");
     }
 }

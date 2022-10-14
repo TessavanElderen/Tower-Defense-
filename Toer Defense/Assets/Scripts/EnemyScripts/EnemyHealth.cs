@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     [Header("References")]
-    public int currentHealth = 20;
+    public int currentHealth = 1;
 
   
     //als de enemy health op 0 komt gaat hij dood. 

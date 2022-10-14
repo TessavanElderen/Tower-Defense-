@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using TMPro;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 public class EnemySpawner : MonoBehaviour
 {
     [Header("UI Text")]

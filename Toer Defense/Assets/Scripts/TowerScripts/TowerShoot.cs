@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TowerShoot : MonoBehaviour
 {
-
     [Header("References Range"), Range(3f, 20.0f)]
     public float range; //diameter
 

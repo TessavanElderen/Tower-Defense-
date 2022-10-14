@@ -142,7 +142,7 @@ MonoBehaviour:
   buyATowerScript: {fileID: 0}
   rangeObject: {fileID: 6640893394490363895}
   _isRangeGone: 0
-  buttonAmount: 100
+  amount: 0
 --- !u!114 &195588949008180126
 MonoBehaviour:
   m_ObjectHideFlags: 0

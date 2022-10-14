@@ -42,7 +42,7 @@ public class Projectile : MonoBehaviour
         {
             //Pak het object (enemy). Pak ook het component EnemyHealth daarin pak ik de functie en roep die op.
             other.gameObject.GetComponent<EnemyHealth>().TakeDamage(amount: damageValue);
-            
+             
             //vernietig elke bullet als het object de enemy raakt.
             Destroy(gameObject);
         }
