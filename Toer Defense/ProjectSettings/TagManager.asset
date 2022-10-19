@@ -7,8 +7,9 @@ TagManager:
   - Waypoint
   - Enemy
   - Tower
-  - TowerRange
   - Path
+  - Ground
+  - CanPlace
   - CantPlace
   layers:
   - Default
@@ -17,9 +18,9 @@ TagManager:
   - groundLayer
   - Water
   - UI
-  - pathLayer
+  - pathLayerMask
   - waterLayer
-  - TowersLayer
+  - TowerLayerMask
   - 
   - 
   - 

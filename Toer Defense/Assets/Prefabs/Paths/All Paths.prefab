@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3389110793833932991}
   - component: {fileID: 3389110793833932928}
   - component: {fileID: 3389110793833932929}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Path (1)
   m_TagString: Path
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 3389110793850424661}
   - component: {fileID: 3389110793850424662}
   - component: {fileID: 3389110793850424663}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Path (2)
   m_TagString: Path
   m_Icon: {fileID: 0}
@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 3389110794069881418}
   - component: {fileID: 3389110794069881419}
   - component: {fileID: 3389110794069881420}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Path (4)
   m_TagString: Path
   m_Icon: {fileID: 0}
@@ -303,7 +303,7 @@ GameObject:
   - component: {fileID: 3389110794209229393}
   - component: {fileID: 3389110794209229394}
   - component: {fileID: 3389110794209229395}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Path
   m_TagString: Path
   m_Icon: {fileID: 0}
@@ -400,7 +400,7 @@ GameObject:
   - component: {fileID: 3389110794272614360}
   - component: {fileID: 3389110794272614361}
   - component: {fileID: 3389110794272614362}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Path (7)
   m_TagString: Path
   m_Icon: {fileID: 0}
@@ -497,7 +497,7 @@ GameObject:
   - component: {fileID: 3389110794807210507}
   - component: {fileID: 3389110794807210508}
   - component: {fileID: 3389110794807210509}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Path (3)
   m_TagString: Path
   m_Icon: {fileID: 0}
@@ -594,7 +594,7 @@ GameObject:
   - component: {fileID: 3389110794883979800}
   - component: {fileID: 3389110794883979801}
   - component: {fileID: 3389110794883979802}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Path (6)
   m_TagString: Path
   m_Icon: {fileID: 0}
@@ -730,7 +730,7 @@ GameObject:
   - component: {fileID: 3389110795657435416}
   - component: {fileID: 3389110795657435417}
   - component: {fileID: 3389110795657435418}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Path (5)
   m_TagString: Path
   m_Icon: {fileID: 0}

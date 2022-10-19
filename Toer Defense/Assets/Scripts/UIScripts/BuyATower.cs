@@ -40,7 +40,7 @@ public class BuyATower : MonoBehaviour
     {
         // tower word aangemaakt. 
         GameObject tower = Instantiate(towerPrefab, new Vector3(0, 1, 0), Quaternion.identity);
-        tower.GetComponent<TowerPlacement>().SelectTower(buttonCostAmount,true);
-        Debug.Log("A Tower On Mouse");
+        tower.GetComponent<TowerPlacement>().SelectTower(true, buttonCostAmount);
+        Debug.Log("A Tower");
     }
 }
