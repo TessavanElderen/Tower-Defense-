@@ -15,15 +15,15 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - groundLayer
+  - Towers
   - Water
   - UI
-  - pathLayerMask
-  - waterLayer
+  - Enemy
+  - placementColliderLayerMask
   - TowerLayerMask
-  - 
-  - 
-  - 
+  - placementCheckMask
+  - 'pathLayerMask '
+  - DamageVolume
   - 
   - 
   - 
