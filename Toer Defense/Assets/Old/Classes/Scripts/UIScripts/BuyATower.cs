@@ -5,12 +5,9 @@ using TMPro;
 using UnityEngine.UI;
 public class BuyATower : MonoBehaviour
 {
-    [Header("Button amount")]
-    [SerializeField] int buttonCostAmount;
+    public int buttonCostAmount = 150;
 
-    [Header("GameObject")]
-    public GameObject towerPrefab;
-
+    private GameObject _curTower;
     private void Update()
     {
         ButtonInteractable();
@@ -18,9 +15,9 @@ public class BuyATower : MonoBehaviour
 
     private void ButtonInteractable()
     {
-        GetComponentInChildren<TextMeshProUGUI>().text = $"$ " + buttonCostAmount;
-
-        if (GameObject.Find("Money").GetComponentInChildren<Money>().displayMoney < buttonCostAmount)
+        GetComponentInChildren<TextMeshProUGUI>().text = $"$ {buttonCostAmount}";
+        /*
+        if (GameObject.Find("Money").GetComponent<Money>().displayMoney < buttonCostAmount)
         {
             GetComponent<Button>().interactable = false;
         }
@@ -28,6 +25,7 @@ public class BuyATower : MonoBehaviour
         {
             GetComponent<Button>().interactable = true;
         }
+        */
     }
 
     public void ButtonCosts(int costs)
@@ -36,11 +34,14 @@ public class BuyATower : MonoBehaviour
         Debug.Log($"ButtonAmount = {costs} and displayMoney = {GameObject.Find("Money")}");
     }
 
-    public void Placement()
+    
+    public void Placement(GameObject tower)
     {
         // tower word aangemaakt. 
-        GameObject tower = Instantiate(towerPrefab, new Vector3(0, 1, 0), Quaternion.identity);
-        tower.GetComponent<TowerPlacement>().SelectTower(true, buttonCostAmount);
+        
+        _curTower = Instantiate(tower, Vector3.zero, Quaternion.identity);
+        tower.GetComponent<TowerPlacement>().SelectTower(true);
         Debug.Log("A Tower");
     }
+    
 }

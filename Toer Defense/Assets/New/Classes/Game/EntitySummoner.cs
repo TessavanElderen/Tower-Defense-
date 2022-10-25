@@ -16,7 +16,6 @@ public class EntitySummoner : MonoBehaviour
     public static Dictionary<int, Queue<Enemy>> enemyObjectPools;
 
     private static bool isInitailized;
- 
 
     public static void Init()
     {

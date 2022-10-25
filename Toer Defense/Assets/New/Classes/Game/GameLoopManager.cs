@@ -50,6 +50,7 @@ public class GameLoopManager : MonoBehaviour
         {
             nodesDistances[i] = Vector3.Distance(nodesPositions[i], nodesPositions[i + 1]);
         }
+
         StartCoroutine(GameLoop());
         InvokeRepeating("SummonTest", 0f, 1f);
     }
@@ -110,12 +111,13 @@ public class GameLoopManager : MonoBehaviour
             nodesIndices.Dispose();
             enemyAccess.Dispose();
             nodesToUse.Dispose();
-
+            
             //Tick Towers; 
             foreach (TowerBehaviour tower in towerInGame)
             {
-                tower.target = TowerTargeting.GetTarget(tower, TowerTargeting.TargetType.first);
-                tower.Tick();
+                    tower.target = TowerTargeting.GetTarget(tower, TowerTargeting.TargetType.first);
+                    tower.Tick();
+                    Debug.Log(tower.target);
             }
 
             //Apply Effects; 
@@ -180,7 +182,6 @@ public class GameLoopManager : MonoBehaviour
     {
         effectQueue.Enqueue(effectData);
     } 
-
 
     public static void EnQueueDamageData(EnemyDamageData damageData)
     {

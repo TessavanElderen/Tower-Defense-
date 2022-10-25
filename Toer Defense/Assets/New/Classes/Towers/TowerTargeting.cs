@@ -10,19 +10,24 @@ public class TowerTargeting
         last,
         close
     };
+    
 
     public static Enemy GetTarget(TowerBehaviour currentTower, TargetType targetMethod)
     {
         Collider[] EnemiesInRange = Physics.OverlapSphere(currentTower.transform.position, currentTower.range, currentTower.enemiesMask);
 
+        foreach (var e in EnemiesInRange)
+        {
+            Debug.Log($"In array: {e.name}");
+        }
+
         NativeArray<EnemyData> enemiesToCalculate = new NativeArray<EnemyData>(EnemiesInRange.Length, Allocator.TempJob);
         NativeArray<Vector3> nodesPostion = new NativeArray<Vector3>(GameLoopManager.nodesPositions, Allocator.TempJob);
         NativeArray<float> nodesDistances = new NativeArray<float>(GameLoopManager.nodesDistances, Allocator.TempJob);
         NativeArray<int> enemyToIndex = new NativeArray<int>(new int[] { -1 }, Allocator.TempJob);
-
         int enemyIndexToReturn = -1;
 
-        for (int i = 0; i < enemiesToCalculate.Length; i++)
+        for (int i = -1; i < enemiesToCalculate.Length; i++)
         {
             Enemy currentEnemy = EnemiesInRange[i].transform.parent.GetComponent<Enemy>();
             int enemyIndexInList = EntitySummoner.enemiesInGame.FindIndex(x => x == currentEnemy);
@@ -45,20 +50,24 @@ public class TowerTargeting
             case 0: //First
                 enemySearchJob.CompareValue = Mathf.Infinity;
                 break;
+
             case 1: //Last
                 enemySearchJob.CompareValue = Mathf.NegativeInfinity;
                 break;
+
             case 2: //Close
                 goto case 0;
 
             case 3: //Strong
                 goto case 1; 
+
             case 4: // Weak
                 goto case 0;  
         }
 
         JobHandle dependency = new JobHandle();
         JobHandle searchJobHandle = enemySearchJob.Schedule(enemiesToCalculate.Length, dependency);
+
         searchJobHandle.Complete();
 
         if (enemyToIndex[0] != -1)
@@ -96,7 +105,7 @@ public class TowerTargeting
         }
     }
 
-    struct SearchForEnemy : IJobFor
+    private struct SearchForEnemy : IJobFor
     {
         [NativeDisableParallelForRestriction]
         public NativeArray<EnemyData> _enemiesToCalculate;

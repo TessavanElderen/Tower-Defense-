@@ -8,7 +8,7 @@ public class FireTriggerManager : MonoBehaviour
 
     [HideInInspector] public float enemyOnFire; 
 
-    private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
@@ -16,5 +16,5 @@ public class FireTriggerManager : MonoBehaviour
             ApplyEffectData effectData = new ApplyEffectData(EntitySummoner.enemiesTransformPairs[other.transform.parent], flameEffect);
             GameLoopManager.EnQueueEffectToApply(effectData); 
         }
-    }
+    }*/
 }

@@ -58,6 +58,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 132058d9e23dd344f8dbab225dc7d445, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyOnFire: 0
 --- !u!1 &1562748883
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,9 +100,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8166682272958476235}
-  - component: {fileID: 8166682272958476234}
   - component: {fileID: 6136699456785623613}
-  - component: {fileID: 2946298729339108827}
   m_Layer: 3
   m_Name: FlameThrower
   m_TagString: CantPlace
@@ -126,26 +125,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8166682272958476234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8166682272958476232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b282c361b22cb274d85f8e37c8560315, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemiesMask:
-    serializedVersion: 2
-    m_Bits: 64
-  target: {fileID: 0}
-  towerPivot: {fileID: 8166682274412377643}
-  Damage: 2
-  fireRate: 3
-  range: 2
 --- !u!65 &6136699456785623613
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -159,18 +138,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0.51, z: 0}
---- !u!114 &2946298729339108827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8166682272958476232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c915aff319f57f547903f17b6e0d90cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8166682274412377640
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
+using UnityEngine.UI; 
 public class TowerBehaviour : MonoBehaviour
 {
     [Header("Tower: Refrences")]
@@ -19,12 +20,11 @@ public class TowerBehaviour : MonoBehaviour
     public float range;
 
     [Header("Costs")]
-    public int summonCosts = 100; 
-
+    public int summonCosts;
 
     //private
     private float delay;
-    private IDamageMethod currentDamageMethodClass; 
+    private IDamageMethod currentDamageMethodClass;
 
 
     void Start()
@@ -42,24 +42,15 @@ public class TowerBehaviour : MonoBehaviour
 
         delay = 1 / fireRate; 
     }
-  
+
     // Update tower of the gameloop state; 
     public void Tick()
     {
-        currentDamageMethodClass.DamageTick(target); 
-        if(target != null)
+        currentDamageMethodClass.DamageTick(target);
+
+        if (target != null)
         {
             towerPivot.transform.rotation = Quaternion.LookRotation(target.transform.position - transform.position);
-        }
-    }
-
-    private void OnDrawGizmoSelected()
-    {
-        if(target != null)
-        {
-            Gizmos.color = Color.green;
-            Gizmos.DrawWireSphere(transform.position, range);
-            Gizmos.DrawLine(towerPivot.position, target.transform.position);
         }
     }
 }

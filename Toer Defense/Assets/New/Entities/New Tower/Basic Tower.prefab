@@ -9,8 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8166682272958476235}
-  - component: {fileID: 8166682272958476234}
-  - component: {fileID: 3336655388705602489}
   - component: {fileID: 6136699456785623613}
   m_Layer: 3
   m_Name: Basic Tower
@@ -36,38 +34,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8166682272958476234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8166682272958476232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b282c361b22cb274d85f8e37c8560315, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemiesMask:
-    serializedVersion: 2
-    m_Bits: 64
-  target: {fileID: 0}
-  towerPivot: {fileID: 8166682274412377643}
-  Damage: 2
-  fireRate: 3
-  range: 5
---- !u!114 &3336655388705602489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8166682272958476232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77aa3ef633ef2c74eb0eb479495e151f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &6136699456785623613
 BoxCollider:
   m_ObjectHideFlags: 0

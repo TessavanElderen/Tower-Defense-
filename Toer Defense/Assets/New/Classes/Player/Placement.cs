@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
+using UnityEngine.UI; 
 
 public class Placement : MonoBehaviour
 {
@@ -13,11 +14,11 @@ public class Placement : MonoBehaviour
     [SerializeField] private LayerMask placementCheckMask;
 
     [Header("Other Scripts")]
-    [SerializeField] private PlayerStats playerStatisticts; 
-    
+    [SerializeField] private PlayerStats playerStatisticts;
+
     // Private 
     private GameObject currentPlacingTower;
-
+    
     private void Update()
     {
         if (currentPlacingTower != null)
@@ -63,9 +64,9 @@ public class Placement : MonoBehaviour
 
     public void SetTowerToPlace(GameObject tower)
     {
-        int towerSummonCost = tower.GetComponent<TowerBehaviour>().summonCosts; 
+        int towerSummonCost = tower.GetComponent<TowerBehaviour>().summonCosts;
 
-        if(playerStatisticts.GetMoney() >= towerSummonCost)
+        if (playerStatisticts.GetMoney() >= towerSummonCost)
         {
             currentPlacingTower = Instantiate(tower, Vector3.zero, Quaternion.identity);
         }

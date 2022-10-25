@@ -23,13 +23,14 @@ public class Enemy : MonoBehaviour
 
     [Header("Transforms")]
     public Transform rootPart; 
+
     public void Init()
     {
         activeEffects = new List<Effect>(); 
 
         health = maxHealth;
         transform.position = GameLoopManager.nodesPositions[0];
-        nodesIndex = 0; 
+        nodesIndex = -1; 
     }
 
     public void Tick()
