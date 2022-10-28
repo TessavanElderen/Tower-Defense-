@@ -1,6 +1,15 @@
 # Tower-Defense
-#### I made a Tower Defense. 
+#### In the last 7 weeks I made a Tower Defense. The game went well in the first half of the period. I was unable to solve a number of problems and I got stuck. But I went for a new approach in the autumn holidays. I wachted video's and learned so much. But I also ended up getting stuck with this approach aswell. After the holiday I spoke with one of my teachers and his advice was: "Begin again. And try it your own way. No Video's". I did try so hard to make it in time. But unfortunately I didn't. BUT I did learn so much after this experience. Athough my game isn't as good as I thought in return I did learn alot. 
 
+#### My plan was to make a functional game but I didn't. I'm really happy that I tried my best. I plan to discuss this experience and this result with my teacher next week.
+
+#### What I have Learned is: 
+- To ask more questions than I asked this period. 
+- To make sure to write things down. 
+- Be Better in planning.
+- If I start with one thing I end that 100% and after that I start something else. 
+
+----------------------------------------------------------------------------------
 ### FlowChart mechanic Tower_Placement
 ```mermaid 
 flowchart TD
