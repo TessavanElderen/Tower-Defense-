@@ -14,6 +14,7 @@ public class Spawner : MonoBehaviour
     {
         StartCoroutine(StartWavesRoutine());
     }
+
     IEnumerator StartWavesRoutine()
     {
         while(currentWave < waves.Count)

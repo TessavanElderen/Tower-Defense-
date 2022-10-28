@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5fea56f7ccb2bc4f999adc6439e553a, type: 3}
+  m_Name: Wave 13
+  m_EditorClassIdentifier: 
+  waves:
+  - {fileID: 2915233593571414207, guid: 3ba9e5194ec8d1f408a46cc23444c95c, type: 3}
+  - {fileID: 2915233593571414207, guid: 5f4ef526b07f4844e846aa8149f678fb, type: 3}
+  - {fileID: 2915233593571414207, guid: 1f758f712093c2a43beaf93216067d87, type: 3}
+  - {fileID: 2915233593571414207, guid: aeccbe475634a554b97951efd68278f0, type: 3}
+  - {fileID: 2915233593571414207, guid: aeccbe475634a554b97951efd68278f0, type: 3}
+  - {fileID: 2915233593571414207, guid: 1f758f712093c2a43beaf93216067d87, type: 3}
