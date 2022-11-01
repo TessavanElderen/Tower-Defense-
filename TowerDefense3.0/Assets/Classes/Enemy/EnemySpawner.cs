@@ -31,6 +31,7 @@ public class EnemySpawner : MonoBehaviour
             {
                 Destroy(enemy);
             }
+            Debug.Log("Next Wave");
             currentWave++;
         }
     }

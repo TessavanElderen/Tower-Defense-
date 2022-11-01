@@ -9,7 +9,6 @@ public class Tower : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
 
     private bool _isSelected;
-    bool _canPlace; 
 
     private void Update()
     {
@@ -26,6 +25,7 @@ public class Tower : MonoBehaviour
             if (Physics.Raycast(cameraRay, out hitInfo, Mathf.Infinity, groundLayer))
             {
                 _worldPosition = hitInfo.point;
+                GetComponent<Shooting>().enabled = false;
             }
 
             MouseInput(); 
@@ -40,6 +40,7 @@ public class Tower : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             GetComponent<Tower>().enabled = true;
+            GetComponent<Shooting>().enabled = true; 
             _isSelected = false;
         }
 
