@@ -112,6 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints: []
+  waypointContainer: {fileID: 2915233593571414207}
   speed: 6
 --- !u!114 &-3806497217968807422
 MonoBehaviour:

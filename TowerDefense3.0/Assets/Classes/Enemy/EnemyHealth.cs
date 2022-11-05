@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
+    public int health = 1;
 
-    // Health int 
-    // Damage the enemy 
-    public int health = 1; 
+    [Header("Money")]
+    public int damageCosts = 1;
 
     public void TakeDamage(int amount)
     {
         health -= amount; 
-        if(health >= 0)
+        if(health <= 0)
         {
+            GameObject.Find("MoneyText").GetComponent<Money>().IncreaseMoney(amount: damageCosts);
             Destroy(this.gameObject); 
         }
     }

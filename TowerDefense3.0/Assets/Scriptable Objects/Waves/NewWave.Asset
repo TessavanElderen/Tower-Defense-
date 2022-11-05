@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5fea56f7ccb2bc4f999adc6439e553a, type: 3}
-  m_Name: Wave 1
+  m_Name: NewWave
   m_EditorClassIdentifier: 
-  spawnName: 
-  waves:
-  - {fileID: 2915233593571414207, guid: 5f4ef526b07f4844e846aa8149f678fb, type: 3}
-  - {fileID: 2915233593571414207, guid: 5f4ef526b07f4844e846aa8149f678fb, type: 3}
-  - {fileID: 2915233593571414207, guid: 5f4ef526b07f4844e846aa8149f678fb, type: 3}
-  - {fileID: 2915233593571414207, guid: 5f4ef526b07f4844e846aa8149f678fb, type: 3}
+  waveInformation:
+  - enemyPrefab: {fileID: 2915233593571414207, guid: 5f4ef526b07f4844e846aa8149f678fb,
+      type: 3}
+    amountToSpawn: 2
+  - enemyPrefab: {fileID: 2915233593571414207, guid: 75e89880d4f3867489def380404a1d00,
+      type: 3}
+    amountToSpawn: 10

@@ -109,10 +109,10 @@ GameObject:
   - component: {fileID: 4773184684340028234}
   - component: {fileID: 4773184684340028235}
   - component: {fileID: 4773184684340028236}
-  - component: {fileID: 496376908405241041}
   - component: {fileID: -2486835240857551403}
+  - component: {fileID: 1789163576}
   m_Layer: 0
-  m_Name: Test Turret
+  m_Name: Laser Turret
   m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -162,7 +162,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: f1ac83295478c3b408c35205eb9f53d7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -197,22 +197,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &496376908405241041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4773184684340028237}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd9954c7f6cadeb48a1c3495bab950bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 5
-  bulletPrefab: {fileID: 2663421137902049613, guid: ca357739598812940ac257ec4c821319,
-    type: 3}
-  reloadSpeed: 0.2
 --- !u!114 &-2486835240857551403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,3 +213,20 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  _towerCosts: 0
+--- !u!114 &1789163576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4773184684340028237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd9954c7f6cadeb48a1c3495bab950bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 7
+  bulletPrefab: {fileID: 2663421137902049613, guid: ca357739598812940ac257ec4c821319,
+    type: 3}
+  reloadSpeed: 0.1

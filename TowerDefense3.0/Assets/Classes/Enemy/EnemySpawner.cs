@@ -1,25 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro; 
 public class EnemySpawner : MonoBehaviour
 {
+    [Header("Text for Rounds and How Many enemies inGame")]
+    public TMP_Text howManyWaves; 
+    public TMP_Text howManyEnemies;
+    public int addMoneyAfterWave; 
+
+    [Header("Spawn")]
     [SerializeField] private string spawnName;
 
-    [SerializeField] private List<WaveScriptableObjects> wavesScripableObject;
+   // [SerializeField] private List<WaveScriptableObjects> wavesScripableObject;
     [SerializeField] private Vector3[] waveSpawnPoint;
 
     [SerializeField] private int currentWave = 0;
     [SerializeField] private int instanceNum = 1;
 
     [SerializeField] private float waitEnemies;
-    [SerializeField] private int waitWave; 
+    [SerializeField] private int waitWave;
+
+    [SerializeField] private int endGameWave; 
+    /*
 
     private void Start()
     {
         StartCoroutine(StartWavesRoutine());
     }
-
+    */
+    /*
     IEnumerator StartWavesRoutine()
     {
         while (currentWave < wavesScripableObject.Count)
@@ -33,10 +43,11 @@ public class EnemySpawner : MonoBehaviour
             }
             Debug.Log("Next Wave");
             currentWave++;
+            howManyWaves.text = $"Wave: {currentWave} / {endGameWave}";
         }
     }
-
-    IEnumerator SpawnEnemyRoutine()
+    */
+  /*  IEnumerator SpawnEnemyRoutine()
     {
         int currentSpawnPointIndex = 0;
 
@@ -48,6 +59,7 @@ public class EnemySpawner : MonoBehaviour
             currentSpawnPointIndex = (currentSpawnPointIndex + 1) % waveSpawnPoint.Length;
             instanceNum++;
             yield return new WaitForSeconds(waitEnemies);
+            howManyEnemies.text = $"Enemy: {GameObject.FindGameObjectsWithTag("Enemy").Length}";
         }
-    }
+    }*/
 }
