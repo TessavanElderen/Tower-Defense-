@@ -1,7 +1,7 @@
 # Tower-Defense
-#### In the last 7 weeks I made a Tower Defense. The game went well in the first half of the period. I was unable to solve a number of problems and I got stuck. But I went for a new approach in the autumn holidays. I wachted video's and learned so much. But I also ended up getting stuck with this approach aswell. After the holiday I spoke with one of my teachers and his advice was: "Begin again. And try it your own way. No Video's". I did try so hard to make it in time. But unfortunately I didn't. BUT I did learn so much after this experience. Athough my game isn't as good as I thought in return I did learn alot. 
+#### I made a Tower Defence game in the last 7 weeks. You can place tower, buy towers, shoot the enemies and more. What I did in the beginning was planning my strategy for the game. The planning and the preparation was good. After I did my best for all the preparations I started the project in Unity. 
 
-#### My plan was to make a functional game but I didn't. I'm really happy that I tried my best. I plan to discuss this experience and this result with my teacher next week.
+#### In the game I made a few mechanics. I mechanic that I'm the most proud of is the UI and the moneySystem. I learned more about how I use the varibales in other scripts. Also a have made a system for the waves. I learned more about the Scriptable Objects and how to link the scriptable objects code with another code that I made. 
 
 #### What I have Learned is: 
 - To ask more questions than I asked this period. 
@@ -9,7 +9,12 @@
 - Be Better in planning.
 - If I start with one thing I end that 100% and after that I start something else. 
 
-----------------------------------------------------------------------------------
+
+---
+#### [Trello]("https://trello.com/b/HtQM66FW/td-ma")
+---
+
+
 ### FlowChart mechanic Tower_Placement
 ```mermaid 
 flowchart TD
@@ -24,4 +29,5 @@ Click_On_Map[Can Place] -- Range --> Green_Range[Becomes Green]
 Green_Range[Becomes Green] -- Mouse --> Mouse[Let Left mouse button go]
 Mouse[Let Left mouse button go] --> Place[You Placed a tower]
 Red_Range[Becomes Red] --> Movement[Can Move around]
-Place[You Placed a tower] --> start((Start))
+Place[You Placed a tower] --> End((End))
+Placement{Can Place Towers?} -- no--> End((End))
