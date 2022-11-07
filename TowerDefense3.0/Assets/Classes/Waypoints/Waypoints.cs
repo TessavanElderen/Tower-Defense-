@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Waypoints : MonoBehaviour
 {
-    [Header("Lists")]
+    [Header("List Refrences")]
     public List<Transform> waypoints = new List<Transform>();
     public GameObject waypointContainer; 
+
+    [Header ("Speed Refrences")]
     public float speed = 5f;
 
     // Private 

@@ -5,9 +5,12 @@ using TMPro;
 using UnityEngine.UI; 
 public class Buying : MonoBehaviour
 {
-    public Tower towerScript;
     [HideInInspector] GameObject currentTurret;
 
+    [Header("Other Scripts")]
+    public Tower towerScript;
+
+    [Header("Button Refrences")]
     public int buttonCostAmount; 
 
     private void Update()

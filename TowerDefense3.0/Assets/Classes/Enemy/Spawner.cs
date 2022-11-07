@@ -2,23 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI; 
 public class Spawner : MonoBehaviour
 {
     [Header("UI Text")]
     public TMP_Text waveLeftText;
     public TMP_Text enemyLeftText;
 
+    public GameObject winPanel; 
+
     [Header("Objects")]
     public GameObject myEnemy;
-
-    [Header("Add Money After A Wave")]
-    public int addMoney;
 
     [Header("WaveSpawner")]
     public int waveCounter = 1;
     public int EnemyNum = 5;
     public int EnemyNumIncrease = 5;
-    [SerializeField] private int _toSpawn;
+    private int _toSpawn;
 
     [Header("Spawning")]
     public float waitForEnemy = 1f;
@@ -27,10 +27,15 @@ public class Spawner : MonoBehaviour
     [Header("EndGame")]
     public int endLevel;
     public GameManager endingGame;
+
+    [Header("Other Scripts")]
+    public Spawner spawner;
+
     private void Start()
     {
         _toSpawn = EnemyNum;
         spawnTimer = waitForEnemy;
+        winPanel.gameObject.SetActive(false);
     }
 
 
@@ -62,6 +67,8 @@ public class Spawner : MonoBehaviour
             if (waveCounter == endLevel)
             {
                 // Show Win scene
+                winPanel.gameObject.SetActive(true);
+                spawner.enabled = false;
             }
         }
         

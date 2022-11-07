@@ -6,8 +6,9 @@ public class Tower : MonoBehaviour
 {
     [HideInInspector] public Vector3 _worldPosition;
 
-    public int _towerCosts; 
+    private int _towerCosts; 
 
+    [Header("LayerMasks")]
     [SerializeField] private LayerMask groundLayer;
 
     private bool _isSelected;

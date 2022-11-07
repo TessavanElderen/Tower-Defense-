@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
+    [Header("Health Refrences")]
     public int health = 1;
 
-    [Header("Money")]
+    [Header("Money Refrences")]
     public int damageCosts = 1;
 
     public void TakeDamage(int amount)

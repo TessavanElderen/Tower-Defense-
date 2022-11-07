@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour
     public float bulletSpeed;
     public float bulletDeleteTimer;
 
-    [Header("ref damage")]
+    [Header("Ref damage")]
     public int damageValue = 1;
 
 
