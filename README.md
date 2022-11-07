@@ -1,7 +1,7 @@
 # Tower-Defense
-#### I made a Tower Defence game in the last 7 weeks. You can place tower, buy towers, delete tower, shoot the enemies and more. What I did in the beginning was planning my strategy for the game. The planning and the build of the preparation was good. After I did my best for all the preparations I started the project in Unity. 
+#### I made a Tower Defence game in the last 7 weeks. You can place tower, buy towers, shoot the enemies and more. What I did in the beginning was planning my strategy for the game. The planning and the preparation was good. After I did my best for all the preparations I started the project in Unity. 
 
-#### In the game I made a few mechanics. I mechanic that I'm the most proud of is the wave system. I learned so much about Scripable Objects and how to make two scripts conecct with eachother. I 
+#### In the game I made a few mechanics. I mechanic that I'm the most proud of is the UI and the moneySystem. I learned more about how I use the varibales in other scripts. Also a have made a system for the waves. I learned more about the Scriptable Objects and how to link the scriptable objects code with another code that I made. 
 
 #### What I have Learned is: 
 - To ask more questions than I asked this period. 
