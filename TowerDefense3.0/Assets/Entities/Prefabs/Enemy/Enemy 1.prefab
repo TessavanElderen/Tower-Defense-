@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 2915233593571414201}
   - component: {fileID: 2915233593571414206}
   - component: {fileID: 2915233593571414202}
-  - component: {fileID: 6871178875257133501}
-  m_Layer: 0
+  - component: {fileID: -3806497217968807422}
+  m_Layer: 7
   m_Name: Enemy 1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,8 +112,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints: []
-  speed: 8
---- !u!114 &6871178875257133501
+  waypointContainer: {fileID: 2915233593571414207}
+  speed: 5
+--- !u!114 &-3806497217968807422
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,4 +126,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b47f599c72c253c4c97e9b63a2c6d583, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 1
+  damageCosts: 1

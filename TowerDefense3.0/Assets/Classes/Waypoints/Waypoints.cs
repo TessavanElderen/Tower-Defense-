@@ -4,17 +4,22 @@ using UnityEngine;
 
 public class Waypoints : MonoBehaviour
 {
-    [Header("Lists")]
-    [SerializeField] private List<Transform> waypoints = new List<Transform>();
+    [Header("List Refrences")]
+    public List<Transform> waypoints = new List<Transform>();
+    public GameObject waypointContainer; 
 
-    private int index = 0;
-
+    [Header ("Speed Refrences")]
     public float speed = 5f;
+
+    // Private 
+    private int index = 0;
     private void Awake()
     {
-        foreach (GameObject waypoint in GameObject.FindGameObjectsWithTag("Waypoint"))
+        waypointContainer = GameObject.Find("WaypointContainer");
+
+        foreach (Transform waypoint in waypointContainer.transform)
         {
-            waypoints.Add(waypoint.transform);
+            waypoints.Add(waypoint);
         }
     }
 
@@ -34,8 +39,9 @@ public class Waypoints : MonoBehaviour
         if (Vector3.Distance(transform.position, waypoints[waypoints.Count - 1].position) < 0.01f)
         {
             Destroy(gameObject);
-
+            GameObject.Find("PlayerLives").GetComponent<PlayerHealth>().TakeDamageHealth();
         }
+
         // als de waypoint is aangeraakt met de enemy dan gaat de enemy naar de volgende in de list
         else if (Vector3.Distance(transform.position, waypoints[index].position) < 0.01f)
         {

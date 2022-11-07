@@ -12,9 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5fea56f7ccb2bc4f999adc6439e553a, type: 3}
   m_Name: Wave 1
   m_EditorClassIdentifier: 
-  spawnName: 
-  waves:
-  - {fileID: 2915233593571414207, guid: 5f4ef526b07f4844e846aa8149f678fb, type: 3}
-  - {fileID: 2915233593571414207, guid: 5f4ef526b07f4844e846aa8149f678fb, type: 3}
-  - {fileID: 2915233593571414207, guid: 5f4ef526b07f4844e846aa8149f678fb, type: 3}
-  - {fileID: 2915233593571414207, guid: 5f4ef526b07f4844e846aa8149f678fb, type: 3}
+  waveInformation: []
