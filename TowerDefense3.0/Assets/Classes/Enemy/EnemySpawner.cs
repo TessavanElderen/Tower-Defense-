@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro; 
+/*
 public class EnemySpawner : MonoBehaviour
 {
     [Header("Text for Rounds and How Many enemies inGame")]
@@ -61,5 +62,6 @@ public class EnemySpawner : MonoBehaviour
             yield return new WaitForSeconds(waitEnemies);
             howManyEnemies.text = $"Enemy: {GameObject.FindGameObjectsWithTag("Enemy").Length}";
         }
-    }*/
+    }
 }
+*/

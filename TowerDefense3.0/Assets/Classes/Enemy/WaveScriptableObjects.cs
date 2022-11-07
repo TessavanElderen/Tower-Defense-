@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 [System.Serializable] //Flags
 public struct WaveInfo
 {
     //Enemies Informations
+
     public GameObject enemyPrefab;
     public int amountToSpawn; 
 }
@@ -16,5 +16,3 @@ public class WaveScriptableObjects : ScriptableObject
 {
     public WaveInfo[] waveInformation; 
 }
-
-

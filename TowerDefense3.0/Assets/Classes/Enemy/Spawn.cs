@@ -6,11 +6,11 @@ using TMPro;
 public class Spawn : MonoBehaviour
 {
     [Header("Scriptable Objects")] // Flags 
-    public WaveScriptableObjects[] waves;
+    public WaveScriptableObjects[] waveScripableObject;
 
     [Header("Delays")]
-    public float waveDelay = 1f; // Delay between Waves
-    public float enemyDelay = 1f; // Delay between Enemies in the wave
+    public float waveDelay = 1.0f; // Delay between Waves
+    public float enemyDelay = 1.0f; // Delay between Enemies in the wave
 
     //private
     private float waveTimer = 0.0f; 
@@ -20,7 +20,7 @@ public class Spawn : MonoBehaviour
     private int currentEnemy = 0; // All enemies in the game
 
     private int currentWaveInformation = 0; // Information about the Enemy (Scripable Objects)
-
+    
     private void Start()
     {
         waveTimer = waveDelay;
@@ -44,35 +44,28 @@ public class Spawn : MonoBehaviour
             // Als de enemy Timer groter is dan de Delay van de enemies
             if (enemyTimer > enemyDelay)
             {
-                // Als de current kleiner is dan de currentWave met de waveInformation met de amountToSpawn
-                if (currentEnemy < waves[currentWave].waveInformation[currentWaveInformation].amountToSpawn)
+                // Als de current enemy kleiner is dan de currentWave met de waveInformation en de amountToSpawn
+                if (currentEnemy < waveScripableObject[currentWave].waveInformation[currentWaveInformation].amountToSpawn)
                 {
-                    // De enemyPrefab word met alle informatie Instantaite in de wave 
-                    Instantiate(waves[currentWave].waveInformation[currentWaveInformation].enemyPrefab);
-
-                    // er word een nieuwe enemy Instantaite 
+                    Instantiate(waveScripableObject[currentWave].waveInformation[currentWaveInformation].enemyPrefab);
                     currentEnemy++;
-
-                    // timer Reset
                     enemyTimer = 0.0f;
                 }
                 else
                 {
                     //Als de currentWaveInformation kleiner is dan de waves en de informatie lengte
-                    if (currentWaveInformation + 1 < waves[currentWave].waveInformation.Length)
+                    if (currentWaveInformation + 1 < waveScripableObject[currentWave].waveInformation.Length)
                     {
-                        // Ga dan naar de volgende informatie is de wave
                         currentWaveInformation++;
-                        // timer reset
                         waveTimer = 0.0f;
+                        Debug.Log("Wave: " + waveScripableObject.Length + "" + currentWave);
                     }
                     else
                     {
-                        // als de currentwave kleiner is dan de wave length
-                        if (currentWave + 1 < waves.Length)
+                        if (currentWave + 1 < waveScripableObject.Length)
                         {
-                            // Ga dan naar de volgende in de lijst
                             currentWave++;
+                            print("Next Wave");
                         }
                     }
                 }
@@ -80,4 +73,3 @@ public class Spawn : MonoBehaviour
         }
     }
 }
-

@@ -9,8 +9,8 @@ public class Waypoints : MonoBehaviour
     public GameObject waypointContainer; 
     public float speed = 5f;
 
+    // Private 
     private int index = 0;
-
     private void Awake()
     {
         waypointContainer = GameObject.Find("WaypointContainer");
@@ -37,8 +37,9 @@ public class Waypoints : MonoBehaviour
         if (Vector3.Distance(transform.position, waypoints[waypoints.Count - 1].position) < 0.01f)
         {
             Destroy(gameObject);
-
+            GameObject.Find("PlayerLives").GetComponent<PlayerHealth>().TakeDamageHealth();
         }
+
         // als de waypoint is aangeraakt met de enemy dan gaat de enemy naar de volgende in de list
         else if (Vector3.Distance(transform.position, waypoints[index].position) < 0.01f)
         {
