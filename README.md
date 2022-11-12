@@ -17,7 +17,7 @@ I'm also proud about my waves. I went for a more harder technique at first. I wa
 
 ---
 
-![]()
+![](https://github.com/TessavanElderen/Tower-Defense-/blob/Develop/TowerDefense3.0/Pictures/Schermafbeelding_20221112_202149.jpg "Placed Towers in the game")
 
 
 
