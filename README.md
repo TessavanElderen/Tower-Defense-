@@ -1,7 +1,7 @@
 # Tower-Defense
 
 
-![](https://github.com/TessavanElderen/Tower-Defense-/tree/Develop/TowerDefense3.0/Gifs)
+![](https://github.com/TessavanElderen/Tower-Defense-/blob/Develop/TowerDefense3.0/Gifs/ReadMe%20video.gif)
 
 ### I made a Tower Defence game in the last  7 weeks (19 sep - 11 nov). You can place tower, buy towers, shoot the enemies and more. What I did in the beginning was planning my strategy for the game. The planning and the preparation was good. After I did my best for all the preparations I started the project in Unity. 
 
