@@ -10,7 +10,6 @@
 #### The mechanic that I'm the most proud of is the shoot & wave mechanic. I worked the most on my shooting code. 
 
 #### Shoot mechanic:
-// Wat heb ik gemaakt en hoe werkt het
 This mechanic is one of the hardest mechanics that I have worked on. The end result that I made is a predict script. De tower has a range around the tower. The tower is in the middle of the range. If the enemy object comes in the range the tower will look at the enemy. After a few minisecondes the tower will shoot a small object (bullet) at the enemy. The bullet has a script with a speed. The tower has a script for the bullet prefab.
 
 #### Wave mechanic:
@@ -18,7 +17,7 @@ I'm also proud about my waves. I went for a more harder technique at first. I wa
 
 ---
 
-
+![]()
 
 
 
