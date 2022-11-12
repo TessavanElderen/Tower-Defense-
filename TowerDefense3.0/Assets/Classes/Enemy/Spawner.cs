@@ -72,7 +72,7 @@ public class Spawner : MonoBehaviour
             }
         }
         
-        waveLeftText.text = $"Wave: {waveCounter} / {endLevel}";
-        enemyLeftText.text = $"Enemy: {GameObject.FindGameObjectsWithTag("Enemy").Length} / {EnemyNum}";
+        waveLeftText.text = $"Wave {waveCounter} / {endLevel}";
+        enemyLeftText.text = $"Enemy {GameObject.FindGameObjectsWithTag("Enemy").Length} / {EnemyNum}";
     }
 }

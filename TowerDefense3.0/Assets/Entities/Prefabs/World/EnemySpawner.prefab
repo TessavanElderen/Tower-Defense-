@@ -47,10 +47,10 @@ MonoBehaviour:
   waveLeftText: {fileID: 0}
   enemyLeftText: {fileID: 0}
   winPanel: {fileID: 0}
-  myEnemy: {fileID: 2915233593571414207, guid: 5f4ef526b07f4844e846aa8149f678fb, type: 3}
+  myEnemy: {fileID: 2915233593571414207, guid: cb1a82522c7fc63478a43e67b9ba29f6, type: 3}
   waveCounter: 2
   EnemyNum: 4
-  EnemyNumIncrease: 1
+  EnemyNumIncrease: 2
   waitForEnemy: 1
   endLevel: 10
   endingGame: {fileID: 0}

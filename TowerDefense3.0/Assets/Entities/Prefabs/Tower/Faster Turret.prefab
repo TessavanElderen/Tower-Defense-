@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: -2486835240857551403}
   - component: {fileID: 1789163576}
   m_Layer: 0
-  m_Name: Basic Turret
+  m_Name: Faster Turret
   m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -162,7 +162,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f1ac83295478c3b408c35205eb9f53d7, type: 2}
+  - {fileID: 2100000, guid: 8bc76b49da81c2f488290db5a33441c6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9954c7f6cadeb48a1c3495bab950bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 5
+  range: 6
   bulletPrefab: {fileID: 2663421137902049613, guid: ca357739598812940ac257ec4c821319,
     type: 3}
-  reloadSpeed: 0.7
+  reloadSpeed: 0.5

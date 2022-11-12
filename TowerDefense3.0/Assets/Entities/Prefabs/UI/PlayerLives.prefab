@@ -46,5 +46,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lostPanel: {fileID: 0}
   healthText: {fileID: 0}
-  totalHealth: 5
+  totalHealth: 20
   spawner: {fileID: 0}
