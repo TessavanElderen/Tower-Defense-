@@ -48,10 +48,10 @@ MonoBehaviour:
   enemyLeftText: {fileID: 0}
   winPanel: {fileID: 0}
   myEnemy: {fileID: 2915233593571414207, guid: cb1a82522c7fc63478a43e67b9ba29f6, type: 3}
-  waveCounter: 2
+  waveCounter: 1
   EnemyNum: 4
   EnemyNumIncrease: 2
   waitForEnemy: 1
-  endLevel: 10
+  endLevel: 15
   endingGame: {fileID: 0}
   spawner: {fileID: 570740493918978126}

@@ -2252,7 +2252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d11720ef32c268488ca6374c4204992, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayMoney: 450
+  displayMoney: 350
 --- !u!1 &6493065479133513366
 GameObject:
   m_ObjectHideFlags: 0
